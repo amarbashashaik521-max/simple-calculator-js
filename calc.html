@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<style>
+div
+{
+   width:300px;
+   margin:auto;
+   padding:20px;
+   background-color:orange;
+   border-radius:10px;
+}
+input[type="button"]
+{
+    width:100px;
+    padding:10px;
+}
+</style>
+
+</head>
+
+<body style="text-align:center">
+
+<h1>CALCULATOR</h1>
+<div>
+<p id="calc">result will be shown here </p>
+<input type="text" id="num1" placeholder="enter first number:"><br><br>
+
+<input type="text" id="num2" placeholder="enter second number:"><br><br>
+
+<input type="button" style="background-color:skyblue" value="ADD" onclick="calculator('add')"><br><br>
+
+<input type="button" style="background-color:lightgreen" value="SUBTRACT" onclick="calculator('sub')"><br><br>
+
+<input type="button" style="background-color:yellow" value="MULTIPLY" onclick="calculator('mul')"><br><br>
+
+<input type="button" style="background-color:lightpink" value="DIVIDE" onclick="calculator('div')"><br><br>
+</div>
+<script>
+function calculator(operation)
+{
+   let num1=Number(document.getElementById("num1").value);
+   let num2=Number(document.getElementById("num2").value);
+   
+   if(operation == "add")
+   {
+      let result=num1 + num2;
+      document.getElementById("calc").innerHTML=num1 +  " + " + num2 + " = " + result;
+   }
+   else if(operation == "sub")
+   {
+      let result=num1 - num2;
+      document.getElementById("calc").innerHTML=num1 +  " - " + num2 + " = " + result;
+
+   }
+   else if(operation == "mul")
+   {
+      let result=num1 * num2;
+      document.getElementById("calc").innerHTML=num1 +  " * " + num2 + " = " + result;
+
+   }
+   else if(operation == "div")
+   {
+      let result=num1 / num2;
+      document.getElementById("calc").innerHTML=num1 +  " / " + num2 + " = " + result;
+
+   }
+}
+</script>
+</body>
+</html>
+	
